@@ -1,0 +1,40 @@
+{
+  "name": "openweathermap-api-tests",
+  "version": "1.0.0",
+  "description": "Automated API testing suite for OpenWeatherMap using Postman and Newman",
+  "main": "index.js",
+  "scripts": {
+    "test": "newman run collection/openweathermap-collection.json --environment environment/openweather-environment.json",
+    "test:report": "newman run collection/openweathermap-collection.json --environment environment/openweather-environment.json --reporters cli,htmlextra --reporter-htmlextra-export reports/test-report.html",
+    "test:ci": "newman run collection/openweathermap-collection.json --environment environment/openweather-environment.json --reporters cli,json --reporter-json-export reports/results.json --bail",
+    "validate": "newman run collection/openweathermap-collection.json --environment environment/openweather-environment.json --dry-run",
+    "security:scan": "echo 'Running security scan...' && grep -r 'sk_\\|pk_\\|password\\|secret' collection/ environment/ || echo 'No secrets found'",
+    "install:newman": "npm install -g newman newman-reporter-htmlextra",
+    "setup": "mkdir -p reports && echo 'Setup complete. Add your API key to the environment file.'"
+  },
+  "keywords": [
+    "api-testing",
+    "postman",
+    "newman",
+    "openweathermap",
+    "automation",
+    "ci-cd"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "newman": "^6.0.0",
+    "newman-reporter-htmlextra": "^1.23.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/openweathermap-api-tests.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/openweathermap-api-tests/issues"
+  },
+  "homepage": "https://github.com/yourusername/openweathermap-api-tests#readme"
+}

@@ -1,0 +1,60 @@
+# Reports and outputs
+reports/
+*.html
+*.json
+!collection/*.json
+!environment/*.json
+
+# Newman cache
+.newman/
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables (local overrides)
+.env
+.env.local
+.env.*.local
+*-local.json
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Coverage reports
+coverage/
+*.lcov
+
+# API keys and secrets (backup safety)
+*secret*
+*key*
+*token*
+!environment/*
+!collection/*
+
+# Postman backup files
+*.postman_collection.json.backup
+*.postman_environment.json.backup

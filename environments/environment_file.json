@@ -1,0 +1,43 @@
+{
+  "id": "openweather-environment",
+  "name": "OpenWeatherMap Environment",
+  "values": [
+    {
+      "key": "API_KEY",
+      "value": "YOUR_API_KEY_HERE",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://api.openweathermap.org/data/2.5",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "geoUrl",
+      "value": "https://api.openweathermap.org/geo/1.0", 
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "testCity",
+      "value": "London",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "testLat",
+      "value": "51.5074",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "testLon",
+      "value": "-0.1278",
+      "type": "default",
+      "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "environment"
+}
