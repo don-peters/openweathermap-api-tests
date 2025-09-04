@@ -33,21 +33,53 @@ A comprehensive Postman collection for testing the OpenWeatherMap API with autom
 2. Generate a free API key
 3. Note: Free tier allows 1,000 calls/day
 
-### 2. Local Setup with Postman
+### 2. Environment Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone <your-repo-url>
+   cd openweathermap-api-tests
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**:
+   ```bash
+   # Copy the example file
+   cp .env.example .env
+   
+   # Edit .env and add your API key
+   echo "OPENWEATHER_API_KEY=your_actual_api_key_here" > .env
+   ```
+
+4. **Run tests**:
+   ```bash
+   # Export the environment variable
+   source .env
+   export OPENWEATHER_API_KEY
+   
+   # Run tests
+   npm run test
+   ```
+
+### 3. Postman Setup (Optional)
 
 1. **Import Collection**:
    - Open Postman
-   - Import `collection/openweathermap-collection.json`
+   - Import `collections/openweather_collection.json`
 
 2. **Import Environment**:
-   - Import `environment/openweather-environment.json`
+   - Import `environments/environment_file.json`
    - Update the `API_KEY` variable with your actual API key
 
 3. **Run Tests**:
    - Select the environment
    - Run the collection or individual requests
 
-### 3. GitHub Repository Setup
+### 4. GitHub Repository Setup
 
 1. **Fork/Clone this repository**
 
