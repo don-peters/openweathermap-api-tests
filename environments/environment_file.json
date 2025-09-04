@@ -4,7 +4,7 @@
   "values": [
     {
       "key": "API_KEY",
-      "value": "YOUR_API_KEY_HERE",
+      "value": "b3f9fe3900b6d9dfc6f1cfb8edfaf6a9",
       "type": "secret",
       "enabled": true
     },

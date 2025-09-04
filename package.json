@@ -4,11 +4,11 @@
   "description": "Automated API testing suite for OpenWeatherMap using Postman and Newman",
   "main": "index.js",
   "scripts": {
-    "test": "newman run collection/openweathermap-collection.json --environment environment/openweather-environment.json",
-    "test:report": "newman run collection/openweathermap-collection.json --environment environment/openweather-environment.json --reporters cli,htmlextra --reporter-htmlextra-export reports/test-report.html",
-    "test:ci": "newman run collection/openweathermap-collection.json --environment environment/openweather-environment.json --reporters cli,json --reporter-json-export reports/results.json --bail",
-    "validate": "newman run collection/openweathermap-collection.json --environment environment/openweather-environment.json --dry-run",
-    "security:scan": "echo 'Running security scan...' && grep -r 'sk_\\|pk_\\|password\\|secret' collection/ environment/ || echo 'No secrets found'",
+    "test": "newman run collections/openweather_collection.json --environment environments/environment_file.json",
+    "test:report": "newman run collections/openweather_collection.json --environment environments/environment_file.json --reporters cli,htmlextra --reporter-htmlextra-export reports/test-report.html",
+    "test:ci": "newman run collections/openweather_collection.json --environment environments/environment_file.json --reporters cli,json --reporter-json-export reports/results.json --bail",
+    "validate": "newman run collections/openweather_collection.json --environment environments/environment_file.json --dry-run",
+    "security:scan": "echo 'Running security scan...' && grep -r 'sk_\\|pk_\\|password\\|secret' collections/ environments/ || echo 'No secrets found'",
     "install:newman": "npm install -g newman newman-reporter-htmlextra",
     "setup": "mkdir -p reports && echo 'Setup complete. Add your API key to the environment file.'"
   },
