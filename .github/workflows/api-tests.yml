@@ -27,6 +27,9 @@ jobs:
     - name: Install dependencies
       run: npm install
       
+    - name: Create reports directory
+      run: mkdir -p reports
+      
     - name: Run API tests
       env:
         OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
@@ -39,6 +42,7 @@ jobs:
         name: test-reports
         path: reports/
         retention-days: 30
+        if-no-files-found: warn
         
     - name: Security scan
       run: npm run security:scan

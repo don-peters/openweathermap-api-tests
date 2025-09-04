@@ -4,6 +4,7 @@ reports/
 *.json
 !collection/*.json
 !environment/*.json
+!package-lock.json
 
 # Newman cache
 .newman/
